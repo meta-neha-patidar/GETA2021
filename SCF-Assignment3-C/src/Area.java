@@ -1,22 +1,22 @@
 import java.util.*;
 public class Area {
-	float areaOfTriangle(float height, float base){
+	double areaOfTriangle(double height, double base){
 		// area of triangle = (height * base) / 2
-		return (float) ((height * base) / 2.0);
+		return Math.round ( height * base / 2.0 * 100.0) / 100.0;
 	}
 	
-	float areaOfRectangle(float length, float width){
+	double areaOfRectangle(double length, double width){
 		// area of rectangle = length * width
 		return length * width ;
 	}
 	
-	float areaOfSquare(float side){
+	double areaOfSquare(double side){
 		//area of square = side * side
 		return side * side;
 	}
 	
-	float areaOfCircle(float radius){
+	double areaOfCircle(double radius){
 		// area of circle = radius * radius * 22 / 7
-		return (float) (radius *radius * 22 / 7);
+		return Math.round( (radius *radius * 22 / 7) * 100.0) / 100.0;
 	}
 }

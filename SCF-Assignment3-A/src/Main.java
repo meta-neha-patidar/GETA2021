@@ -19,6 +19,7 @@ public class Main {
 			StringOperations object=new StringOperations();
 			while (operationCase !=0){
 				if(operationCase ==1){
+					// compare strings
 					try{
 						System.out.println("Enter two strings : ");
 						String string1=scanner.next();
@@ -28,15 +29,17 @@ public class Main {
 					}
 				}
 				else if(operationCase == 2){
+					// reverse a string
 					try{
 						System.out.println("Enter a string : ");
-						StringBuilder string=new StringBuilder(scanner.next());
+						String string=scanner.next();
 						System.out.println("Result : " + object.reverseString(string));
 					}catch (Exception e){
 						System.out.println("Invalid Input");
 					}
 				}
 				else if(operationCase == 3){
+					// swap case of letters of string
 					try{
 						System.out.println("Enter a string : ");
 						StringBuilder string=new StringBuilder(scanner.next());
@@ -47,6 +50,7 @@ public class Main {
 					}
 				}
 				else if(operationCase == 4){
+					// largest word from string
 					try{
 						System.out.println("Enter a string having word separated by @ : ");
 //					StringBuffer inputString = new StringBuffer(scanner.next());

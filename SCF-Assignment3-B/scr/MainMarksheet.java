@@ -11,7 +11,10 @@ public class MainMarksheet {
 		
 		System.out.println("Enter the number of students : ");			
 		int noOfStudent = scanner.nextInt();						//take no of students as input
-		
+		if(noOfStudent == 0){
+			System.out.println("number Of Student must be greater than 0");
+			return ;
+		}
 		int gradeArray[] = new int[noOfStudent];
 		for(int i = 0; i < noOfStudent; i++){
 			gradeArray[i] = scanner.nextInt();					// take grade of all students

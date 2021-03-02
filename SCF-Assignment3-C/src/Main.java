@@ -16,29 +16,41 @@ public class Main {
 		while(operation != 0){
 			if(operation == 1){
 				//area of triangle
-				System.out.println("Enter height and base of triangle : ");
-				float height = scanner.nextFloat();								// height of triangle to calculate area of triangle
-				float base = scanner.nextFloat();								//base of triangle to calculate area of triangle
-				System.out.println("Area of triangle is : " + areaObject.areaOfTriangle(height, base));				//area of triangle as an output
+				System.out.println("Enter height and base of triangle must be greater than 0: ");
+				double height = scanner.nextDouble();								// height of triangle to calculate area of triangle
+				double base = scanner.nextDouble();								//base of triangle to calculate area of triangle
+				if(height == 0 || base == 0){
+					System.out.println("Invalid input");
+				}else
+					System.out.println("Area of triangle is : " + areaObject.areaOfTriangle(height, base));				//area of triangle as an output
 			}
 			else if(operation == 2){
 				//area of rectangle
-				System.out.println("Enter length and width of rectangle : ");
-				float length = scanner.nextFloat();							//length of rectangle
-				float width = scanner.nextFloat();							//width of rectangle
-				System.out.println("Area of rectangle is : " + areaObject.areaOfRectangle(length, width));		//area of rectangle as an output
+				System.out.println("Enter length and width of rectangle must be greater than 0: ");
+				double length = scanner.nextDouble();							//length of rectangle
+				double width = scanner.nextDouble();							//width of rectangle
+				if(length == 0 || width == 0){
+					System.out.println("Invalid input");
+				}else
+					System.out.println("Area of rectangle is : " + areaObject.areaOfRectangle(length, width));		//area of rectangle as an output
 			}
 			else if(operation == 3){
 				//area of square
-				System.out.println("Enter the side of square : ");
-				float side = scanner.nextFloat();							//side of square to calculate ares
-				System.out.println("Area of square : " + areaObject.areaOfSquare(side));		//area of square as an output
+				System.out.println("Enter the side of square must be greater than 0: ");
+				double side = scanner.nextDouble();							//side of square to calculate ares
+				if(side == 0){
+					System.out.println("Invalid input");
+				}else
+					System.out.println("Area of square : " + areaObject.areaOfSquare(side));		//area of square as an output
 			}
 			else if(operation == 4){
 				//area of circle
-				System.out.println("Enter radius of circle : ");
-				float radius = scanner.nextFloat();						//radius of circle to calculate area
-				System.out.println("Area of circle : " + areaObject.areaOfCircle(radius));			//area of circle as an output
+				System.out.println("Enter radius of circle greater than 0: ");
+				double radius = scanner.nextDouble();						//radius of circle to calculate area
+				if(radius == 0){
+					System.out.println("Invalid input");
+				}else
+					System.out.println("Area of circle : " + areaObject.areaOfCircle(radius));			//area of circle as an output
 			}
 			else{
 				System.out.println("Select a valid input : ");			//number is not in between 0-4
