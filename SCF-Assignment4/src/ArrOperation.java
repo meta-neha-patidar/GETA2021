@@ -88,29 +88,6 @@ public class ArrOperation {
 		}
 		return array;
 	}
-	
-//	int [] fixXY(int array[], int x, int y){
-//		List<Integer> yIndexes = YIndex(array,y,x);
-//		int yCount = yIndexes.size();
-//		int pos = 0;
-//		for(int i = 0;i < array.length; i++){
-//			if(array[i]== x && array[i+1]!= y){
-//				array[yIndexes.get(pos)] = array[i+1];
-//				array[i+1] = y;
-//				pos++;
-//			}
-//		}
-//		return array;
-//	}
-//	public static List<Integer> YIndex(int arr[],int y,int x){
-//		List<Integer> yIndexes = new ArrayList<Integer>();
-//		for(int i=0;i<arr.length;i++){
-//			if(arr[i]==y && (i==0 || arr[i-1]!=x)){
-//				yIndexes.add(i);
-//			}
-//		}
-//		return yIndexes;
-//	}
 	/*
 	 * @param array - input array
 	 * @return index from where array is split otherwise @return -1
