@@ -48,89 +48,82 @@ public class OperationsClass {
 	
 	/*
 	 * @param infix- infix expression
-	 * @return prefix- prefix expression
+	 * @return prefixString- prefix expression
 	 */
 	String prefixExpression(String [] infix){
 		StackImplement operator = new StackImplement(infix.length);
 		StackImplement operand = new StackImplement(infix.length);
 		
 		for(int i = 0; i < infix.length; i++){
+			String element = infix[i];
 			//if element is an opening bracket then push into operator stack
-			if ("(".equals(infix[i])){
+			if ("(".equals(element)){
 				
-				operator.push(infix[i]);
+				operator.push(element);
 			}
 			
 			//if element is closing bracket then pop from both stack and push in operand  till opening bracket is not found
-			else if (")".equals(infix[i])){
+			else if (")".equals(element)){
 	
-				while(!operator.isEmpty() && operator.peek() != "("){
+				while(!operator.isEmpty() && !"(".equals(operator.peek())){
 
-					String op1 = operand.pop(); 
+					String operand1 = operand.pop(); 
 					
-	                String op2 = "";
+	                String operand2 = "";
 	                if(!operand.isEmpty())
-	                	op2 = operand.pop();
+	                	operand2 = operand.pop();
 	                
-	                String op ="";
-		            if(operator.peek() != "(")
-		            	 op = operator.pop();
-		            else break;
-	    
-	                String temp = op + op2 + op1;
+	                String op = operator.pop();
+	                System.out.println(op);
+	                String tempVariable = op + operand2 + operand1;
 	                
-	                operand.push(temp);
+	                operand.push(tempVariable);
 				}
 				operator.pop();
-				//if (operator.isEmpty()) return "invalid";
 				
 			}
-			else if(! isOperator(infix[i])){
+			else if(! isOperator(element) && ! "(".equals(element)){
 				
-				operand.push(infix[i]);
+				operand.push(element);
 			}
 			else {
-				while ( !operator.isEmpty() && getPriority(infix[i]) <= getPriority(operator.peek()))  
+				while ( !operator.isEmpty() && getPriority(element) <= getPriority(operator.peek()) && !"(".equals(operator.peek()))  
 		                { 
-							String op1 = "";
+							String operand1 = "";
 				            if(!operand.isEmpty())
-				            	op1 = operand.pop();
+				            	operand1 = operand.pop();
 					
-							String op2 = "";
+							String operand2 = "";
 							if(!operand.isEmpty())
-								op2 = operand.pop();
+								operand2 = operand.pop();
 	                
-							String op ="";
-				            if(operator.peek() != "(")
-				            	 op = operator.pop();
-				            else
-				            	operator.pop();
-							String temp = op + op2 + op1;
-							operand.push(temp);
+							String op = operator.pop();
+							
+							String tempVariable = op + operand2 + operand1;
+							operand.push(tempVariable);
 		            } 
-		          operator.push(infix[i]); 
+		          operator.push(element); 
 			}	
 		}
-		while (!operator.isEmpty() && operator.peek()!= "("){
+		while (!operator.isEmpty() && !"(".equals(operator.peek())){
 			
-			String op1 =operand.pop(); 
+			String operand1 =operand.pop(); 
 			
-            String op2 = "";
+            String operand2 = "";
             if(!operand.isEmpty())
-            	op2 = operand.pop();
+            	operand2 = operand.pop();
             
-            String op ="";
-            if(operator.peek() != "(")
-            	 op = operator.pop(); 
-            else operator.pop();
-            String temp = op + op2 + op1;
+            String op = operator.pop(); 
+            
+            String temp = op + operand2 + operand1;
             operand.push(temp);
 		}
-		return operand.peek();
+		String prefixString = operand.peek();
+		return prefixString;
 	}
 	/*
-	 * @param infix- infix expression
-	 * @return postfix
+	 * @param infixString- infix expression
+	 * @return postfixString
 	 */
 	String postfixExpression(String [] infixString){
 		String postfixString = "";
