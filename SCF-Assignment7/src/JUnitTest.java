@@ -38,7 +38,7 @@ public class JUnitTest {
 	}
 	
 	@Test
-	public void isSymmetricalMatrixTest(){
+	public void isSymmetricalMatrixTestPositive(){
 		int array[][] = {
                 {1, 0, 5, 0, 4},
                 {0, 4, 0, 3, 8},
@@ -46,9 +46,20 @@ public class JUnitTest {
                 {0, 3, 0, 0, 2},
                 {4, 8, 0, 2, 0}
             };
-		int nonZeroCount = 12;
-		object = new SparseMatrix(nonZeroCount,array);
-		assertEquals(true,object.isSymmetricalMatrix());
+		
+		assertEquals(true,object.isSymmetricalMatrix(array));
+		
+	}
+	@Test
+	public void isSymmetricalMatrixTestNegative(){
+		int array[][] = {
+                {1, 0, 5, 0, 4},
+                {0, 4, 0, 3, 8},
+                {5, 0, 0, 0, 0},
+                {0, 3, 0, 0, 2},
+            };
+		
+		assertEquals(false,object.isSymmetricalMatrix(array));
 		
 	}
 	@Test
