@@ -59,16 +59,22 @@ public class SparseMatrix {
 		}
 		return transposeMatrix;
 	}
-	public boolean isSymmetricalMatrix(){
-		int [][] original = sparseMatrix;
-		int transpose[][] = getTranspose();
-		if(original != null && transpose != null){
-			for(int i = 0; i < noOfNoneZeros;i++){
-				if(original[i][0] == transpose[i][1] && original[i][1] == transpose[i][0] &&original[i][2] == transpose[i][2]){
-					continue;
-				}else return false;
+	static boolean isSymmetricalMatrix(int array[][]){
+		if(array == null || array.length == 0){
+			System.out.println("Operation can't perform");
+			return false;
+		}
+		if(array.length != array[0].length){
+			return false;
+		}
+		for(int row = 0;row < array.length; row++){
+			for(int col = 0; col < array[0].length; col++){
+				if(array[row][col] != array[col][row]){
+					return false;
+				}
 			}
 		}
+		
 		return true;
 	}
 	
@@ -173,8 +179,8 @@ public class SparseMatrix {
 						}
 					}
 				}
-				SparseMatrix object = new SparseMatrix(nonZero,array);
-				System.out.println("Given matrix a symmetric or not : " + object.isSymmetricalMatrix());
+				
+				System.out.println("Given matrix a symmetric or not : " + isSymmetricalMatrix(array));
 			}else if(operationCase == 3){
 				
 				int rows1, columns1, array1[][], rows2, columns2, array2[][];
