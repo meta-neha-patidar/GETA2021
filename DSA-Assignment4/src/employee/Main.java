@@ -29,6 +29,8 @@ public class Main {
 					Employee employee = new Employee(id,name,address);
 					if(employeeSetObject.addEmployee(employee)){
 						employeeList.add(employee);
+					}else{
+						System.out.println("Enter non duplicate id");
 					}
 					
 				}else if (operationCase ==2){
