@@ -69,7 +69,7 @@ public class Main {
 					System.out.println("Ener the length of input sub array");
 					int length2 = scanner.nextInt();
 					int array2[] = new int[length2];
-					System.out.printf("Enter %d set elements\n",length);
+					System.out.printf("Enter %d set elements\n",length2);
 					for(int index = 0;index < length2; index++){
 						array2[index] = scanner.nextInt();
 					}
