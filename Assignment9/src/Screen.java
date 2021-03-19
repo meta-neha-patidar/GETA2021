@@ -52,13 +52,6 @@ public class Screen {
 	}
 	
 	/*
-	 * purpose remove all shapeObjects of same type
-	 * @param scanner
-	 */
-	static void removeAllShapeObject(Scanner scanner){
-		
-	}
-	/*
 	 * purpose: display the shapes on screen
 	 */
 	static void display(){
@@ -92,9 +85,8 @@ public class Screen {
 			System.out.println("Enter 0 to perform any operation");
 			System.out.println("Enter 1 to add shape ");
 			System.out.println("Enter 2 to remove shape object");
-			System.out.println("Enter 3 to remove all shape object");
-			System.out.println("Enter 4 to display shapes on screen");
-			System.out.println("Enter 5 to check that a given point is enclosed by which shapes");
+			System.out.println("Enter 3 to display shapes on screen");
+			System.out.println("Enter 4 to check that a given point is enclosed by which shapes");
 			int operationCase = scanner.nextInt();
 			while(operationCase != 0){
 				if(operationCase == 1){
@@ -108,13 +100,10 @@ public class Screen {
 					removeShapeObject(shapeNo);
 				}
 				else if(operationCase == 3){
-					
-				}
-				else if(operationCase == 4){
 					//display()
 					display();
 				}
-				else if (operationCase == 5){
+				else if (operationCase == 4){
 					System.out.println("Enter x and y coordinate of point");
 					int x = scanner.nextInt();
 					int y = scanner.nextInt();
