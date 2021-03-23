@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<title>Metacube Parking</title>
+	</head>
+	<body>
+		<!-- navigation bar -->
+		<nav class="topnav" align="center">
+			<a href="#employee" >Add Employee</a><br>
+			<a href="#vehicle">Add Vehical</a><br>
+			<a href="#feedback">Give Feedback</a><br>
+			<a href="#price">Pricing</a>
+		</nav class = "">
+		<header align="center">
+			<h1 >Metacube Parking System</h1>
+		</header>
+		<div class = "region" id = "employee" align="center">
+			<h2>Add Employee</h2>
+			<span >
+				<form >
+					<label>Full Name </label>
+					<input type = "text" id = "employeeName" placeholder="Enter you name">
+					<br>
+					<br>
+					<label for = "male">Gender</label>
+					<br>
+					
+					<input type = "radio" id = "female" name = "gender" value = "female">
+					<label for = "female">Female</label>
+					<br>
+					<input type = "radio" id = "male" name = "gender" value = "male">
+					<label for = "male">Male</label>
+					<br>
+					<br>
+					<label>Email Id</label>
+					<input type = "email" id = "empEmail" placeholder="Enter you Email address">
+					<br>
+					<br>
+					<label>Password</label>
+					<input type = "password" id = "empPassword" placeholder = "Enter password">
+					<br>
+					<br>
+					<label>Confirm Password</label>
+					<input type = "password" id = "confirmPassword" placeholder = "Re-enter your password">
+					<br>
+					<br>
+					<label>Contact</label>
+					<input type = "tel" id = "empContact" placeholder="Enter contact number">
+					<br>
+					<br>
+					<input type = "submit" value = "Add Employee">
+				</form>
+			</span>
+		</div>
+		
+		<div class = "region" id = "vehicle" align="center">
+			<h2>Add vehicle</h2>
+			<span>
+				<form >
+					<label>Vehicle Mark</label>
+					<input type = "text" id = "VehicleBrand" placeholder = "Vehicle brand">
+					<br>
+					<br>
+					<label>Vehicle Model</label>
+					<input type = "text" id = "VehicleModel" placeholder = "Vehicle Model">
+					<br>
+					<br>
+					<label>Vehicle Type</label>
+					<input type = "text" id = "VehicleType" placeholder = "Vehicle Type">
+					<br>
+					<br>
+					<label>Vehicle Number</label>
+					<input type = "text" id = "VehicleNo" placeholder = "Vehicle Number">
+					<br>
+					<br>
+					<label>Employee Id</label>
+					<input type = "text" id = "empId" placeholder = "EmployeeId">
+					<br>
+					<br>
+					<label>Employee Id</label>
+					<input type = "textarea" id = "VehicleIdentification" placeholder = "Vehicle color, mark, visible accessory, etc.">
+					<br>
+					<br>
+					<input type = "submit" value= "Add Vehicle">
+				</form>
+			</span>
+		</div>
+		
+		<div class = "region" id = "feedback" align="center">
+			<h2>Feedback</h2>
+			<span>
+				<input type = "text" id = "empName" placeholder = "Enter your name">
+				<br>
+				<br>
+				<input type = "text" id = "empMailId" placeholder = "Enter your mail id">
+				<br>
+				<br>
+				<input type = "text" id = "subject" placeholder = "Subject">
+				<br>
+				<br>
+				<input type = "massage" rows = 3 cols = 20  id = "feedbackMsg" placeholder = "Enter your massage" >
+				<br>
+				<br>
+				<input type = "submit">
+			</span>
+		</div>
+		
+		<div id= "price" align="center">
+			<h2>Pricing</h2>
+			<span>
+				<h4 > CYCLE</h4>
+				<div>
+					<h4>$100<h4>
+					<p>/month</p>
+				</div>
+				<p>$5 / day</p>
+				<p>$100 / month</p>
+				<p>$500 / year</p>
+				<button>Purchase</button>
+			</span>
+			<span>
+				<h4> MOTOR CYCLE</h4>
+				<div>
+					<h4>2100<h4>
+					<p>/month</p>
+				</div>
+				<p>$10 / day</p>
+				<p>$200 / month</p>
+				<p>$1000 / year</p>
+				<button>Purchase</button>
+			</span>
+			<span>
+				<h4> FOUR WHEELER</h4>
+				<div>
+					<h4>$500<h4>
+					<p>/month</p>
+				</div>
+				<p>$20 / day</p>
+				<p>$500 / month</p>
+				<p>$3500 / year</p>
+				<button>Purchase</button>
+				<br>
+				<br>
+			</span>
+			<input type = "submit" >
+		</div>
+	</body>
+
+</html>
