@@ -1,0 +1,42 @@
+body{	
+	background-color: #d4ebd0;
+}
+.collapsible{
+	background-color: #387c6d;
+	color: #000000;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+}
+
+.active, .collapsible:hover {
+  background-color: #3a6351;
+}
+
+
+.subDivision{
+	height : 30px;
+	background-color: #387c6d;
+}
+.region{
+	width : 70%;
+	background-color : #7eca9c;
+	
+}
+.priceBox{
+	float : left;
+	border-color: black;
+	width : 28%;
+	margin : 1%;
+	padding : 1%;
+	border-style: solid;
+	background-color : #7eca9c;
+	border-radius: 5%;
+}
+.priceSubsection{
+	width : 33%;
+	border-style: solid;
+	border-radius: 50%;
+}
