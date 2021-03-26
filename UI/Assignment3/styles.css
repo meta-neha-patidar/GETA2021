@@ -1,0 +1,133 @@
+body{
+  background-image: url("images/bodybg.png");
+  font-family: 'Dosis', sans-serif;
+}
+#topSection{
+  height: 100%;
+  background-image: url("images/homebg.png");
+  color: white;
+}
+.container{
+  margin: 0%;
+  padding: 2%;
+	height : auto;
+  justify-content: space-around;
+  align-items:stretch;
+	display: flex;
+}
+.menuElement{
+  padding : 15px;
+  overflow: hidden;
+	padding: 14px 16px;
+  
+}
+h2{
+  font-size: 3rem;
+  padding: 0%;
+}
+.menuElement:hover {
+  color: antiquewhite;
+  background-color: #111;
+}
+
+#download{
+  background-color: tomato;
+  padding: 3%;
+  margin: 1px;
+}
+#feature{
+  background-color: midnightblue;
+  padding: 3%;
+  margin: 1px;
+}
+.col{
+  padding: 3%;
+}
+
+.enimationEffectRow{
+  display: flex;
+  margin: 2%;
+  padding: 2%;
+	height : auto;
+  justify-content: center;
+  align-items:center;
+	
+  flex-direction: row;
+}
+.enimationEffectCol{
+  padding: 2%;
+}
+.enimationEffectCol h3{
+  font-size: 1.5rem;
+}
+
+.screen102{
+  align-items:stretch;
+  padding: 4%;
+  
+}
+
+.containerDivision {
+  padding: auto;
+  display: flex;
+  margin: 0%;
+	height : auto;
+  justify-content: space-evenly;
+  align-items:stretch;
+  flex-direction: row;
+  display: flex;
+  
+}
+.containerDivision .row {
+  padding: auto;
+  display: flex;
+  margin: 0%;
+	height : auto;
+  justify-content: space-evenly;
+  align-items:stretch;
+  flex-direction: row;
+  display: flex;
+}
+.bottomQuote{
+  float: right;
+}
+.containerDivision p{
+  font-size: 1.5rem;
+}
+.bottomDivision .row{
+  display: flex;
+  margin: 0%;
+	height : auto;
+  justify-content: center;
+  align-items:stretch;
+  flex-direction: row;
+  background-color: cornflowerblue;
+  color: white;
+}
+.subDiv{
+  display: flex;
+  margin: 3%;
+  padding: 3%;
+	height : auto;
+  justify-content:space-around;
+  align-items:stretch;
+  flex-direction: row;
+}
+
+.bottomNav{
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+	height : auto;
+  justify-content: space-around;
+  align-items:flex-end;
+	
+  background-color: rgb(34, 10, 34);
+  color: white;
+}
+.rights{
+  text-align: center;
+  background-color: rgb(34, 10, 34);
+  color: gray;
+  padding: 2%;
+}
