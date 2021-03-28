@@ -173,4 +173,114 @@ public class OperationsClass {
 		}
 		return postfixString;
 	}
+	/**
+	 * 
+	 * @param infixExpression
+	 * @return
+	 */
+	int evaluation(String[] infix){
+		StackImplement operator = new StackImplement(infix.length);
+		StackImplement operand = new StackImplement(infix.length);
+		
+		for(int i = 0; i < infix.length; i++){
+			String element = infix[i];
+			//if element is an opening bracket then push into operator stack
+			if ("(".equals(element)){
+				
+				operator.push(element);
+			}
+			
+			//if element is closing bracket then pop from both stack and push in operand  till opening bracket is not found
+			else if (")".equals(element)){
+	
+				while(!operator.isEmpty() && !"(".equals(operator.peek())){
+
+					String operand1 = operand.pop(); 
+					
+	                String operand2 = "";
+	                if(!operand.isEmpty())
+	                	operand2 = operand.pop();
+	                
+	                String op = operator.pop();
+	                System.out.println(op);
+	                String tempVariable =  helper(operand1,operand2,op);
+	                
+	                operand.push(tempVariable);
+				}
+				operator.pop();
+				
+			}
+			else if(! isOperator(element) && ! "(".equals(element)){
+				
+				operand.push(element);
+			}
+			else {
+				while ( !operator.isEmpty() && getPriority(element) <= getPriority(operator.peek()) && !"(".equals(operator.peek()))  
+		                { 
+							String operand1 = operand.pop();
+					
+							String operand2 = "";
+							if(!operand.isEmpty())
+								operand2 = operand.pop();
+	                
+							String op = operator.pop();
+							
+							String tempVariable = helper(operand1,operand2,op);
+							operand.push(tempVariable);
+		            } 
+		          operator.push(element); 
+			}	
+		}
+		while (!operator.isEmpty() && !"(".equals(operator.peek())){
+			
+			String operand1 =operand.pop(); 
+			
+            String operand2 = "";
+            if(!operand.isEmpty())
+            	operand2 = operand.pop();
+            
+            String op = operator.pop(); 
+            
+            String temp = helper(operand1,operand2,op);
+            operand.push(temp);
+		}
+		String prefixString = operand.peek();
+		return Integer.parseInt(prefixString);
+	}
+	
+	
+	/**
+	 * 
+	 * @param operand1
+	 * @param operand2
+	 * @param operator
+	 * @return
+	 */
+	static String helper(String operand1,String operand2,String operator){
+		int result = 0;
+		int op1 = Integer.parseInt(operand1);
+		int op2 = Integer.parseInt(operand2);
+		if("+".equals(operator)){
+			result= op1 + op2;
+		}
+		else if("-".equals(operator)){
+			result= op1 - op2;
+		}
+		else if("*".equals(operator)){
+			result= op1 * op2;
+		}
+		else if("/".equals(operator)){
+			result= op1 / op2;
+		}
+		else if("&".equals(operator)){
+			result= op1 & op2;
+		}
+		else if("|".equals(operator)){
+			result= op1 | op2;
+		}
+		else if("^".equals(operator)){
+			result= op1 ^ op2;
+		}
+		return Integer.toString(result);
+	}
 }
