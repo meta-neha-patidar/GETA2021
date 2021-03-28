@@ -22,17 +22,21 @@ public class MainClass {
 		System.out.println(stack.isEmpty());
 		System.out.println(stack.isFull());
 		*/
-		
-		System.out.println("Enter infix expression");
-		String [] infixExpression = scanner.nextLine().split(" ");
-		OperationsClass objectOperationsClass = new OperationsClass();
-		
-		String prefixExp = objectOperationsClass.prefixExpression(infixExpression);
-		System.out.println("Prefix Expression : " + prefixExp);
-		
-		String postfixExp = objectOperationsClass.postfixExpression(infixExpression);
-		System.out.println("Post Expression : " + postfixExp);
-		
+		try{
+			System.out.println("Enter infix expression");
+			String [] infixExpression = scanner.nextLine().split(" ");
+			OperationsClass objectOperationsClass = new OperationsClass();
+			
+			String prefixExp = objectOperationsClass.prefixExpression(infixExpression);
+			System.out.println("Prefix Expression : " + prefixExp);
+			
+			String postfixExp = objectOperationsClass.postfixExpression(infixExpression);
+			System.out.println("Post Expression : " + postfixExp);
+			System.out.println("Result after evaluation of infix expression = " + objectOperationsClass.evaluation(infixExpression));
+			
+		} catch (Exception e){
+			System.out.println(e);
+		}
 	}
 
 }
