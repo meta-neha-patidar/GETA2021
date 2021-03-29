@@ -1,0 +1,103 @@
+.container{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.blogHeader{
+    border-bottom: 1px solid #e5e5e5;
+
+}
+.row{
+    display: flex;
+}
+.col-4{
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+}
+#outer{
+    justify-content: flex-end;
+}
+.row.rowProperties{
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.row.rowProperties .blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.btn-outline-secondary {
+    color: #6c757d;
+    background-color: transparent;
+    background-image: none;
+    border-color: #6c757d;
+}
+.navigation{
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    justify-content: space-between!important;
+    
+}
+.navigation .navElement{
+    color: #6c757d;
+}
+
+
+.topSubdivision{
+    display: flex;
+    background-color: #343a40!important;
+}
+.col-md-6{
+    display: block;
+    padding: 1rem!important;
+    border-radius: .25rem!important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.display-4{
+    font-size: 2.5rem;
+    font-weight: 700!important;
+    display: block;
+    line-height: 1.2;
+    font-family: "Playfair Display", "Times New Roman", serif;
+    margin-bottom: .5rem;
+    font-style: italic!important;
+    color: white;
+}
+.displayContent{
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: white;
+    display: block;
+}
+.displayContinue{
+    display: block;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700!important;
+}
