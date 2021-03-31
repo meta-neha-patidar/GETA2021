@@ -4,9 +4,9 @@ import java.util.*;
  * @author - Neha Patidar
  */
 public class Main {
-	static void printPoly(int [] poly){
+	static void printPoly(int [][] poly){
 		for(int index = 0; index < poly.length; index++){
-			System.out.print(poly[index] + " ");
+			System.out.print(poly[index][0] + "x^" + poly[index][1]+ "\t");
 		}
 	}
 
@@ -14,11 +14,13 @@ public class Main {
 		// TODO Auto-generated method stub
 		try{
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("Enter degree of polynomial");
+			System.out.println("Enter no of terrms of polynomial");
 			int length = scanner.nextInt();
-			int polyArr[] = new int[length+1];
-			for(int index = 0; index <= length; index++){
-				polyArr[index] = scanner.nextInt();
+			int polyArr[][] = new int[length][2];
+			for(int index = 0; index < length; index++){
+				System.out.println("Enter coofficient and power of term in polynomial");
+				polyArr[index][0] = scanner.nextInt();
+				polyArr[index][1] = scanner.nextInt();
 			}
 			Polynomial poly = new Polynomial(polyArr);
 			System.out.println("Enter 0 to stop performing operations");
@@ -39,31 +41,35 @@ public class Main {
 					System.out.println("Degree of polynomial = " + poly.degree());
 				}else if(operationCase == 3){
 					//addPolynomials
-					System.out.println("Enter degree of second Polynomial ");
+					System.out.println("Enter no term of second Polynomial ");
 					
 					int length2 = scanner.nextInt();
-					int polyArr2[] = new int[length2 + 1];
-					for(int index = 0; index <= length2; index++){
-						polyArr2[index] = scanner.nextInt();
+					int polyArr2[][] = new int[length2][2];
+					for(int index = 0; index < length2; index++){
+						System.out.println("Enter coofficient and power of term in polynomial");
+						polyArr2[index][0] = scanner.nextInt();
+						polyArr2[index][1] = scanner.nextInt();
 					}
 					Polynomial poly2 = new Polynomial(polyArr2);
 					
-					int addedPoly[] = Polynomial.addPolynomials(poly, poly2);
+					int addedPoly[][] = Polynomial.addPolynomials(poly, poly2);
 					System.out.println("Added polynomial ");
 					printPoly(addedPoly);
-					System.out.println("========");
+					System.out.println("\n========");
 					
 				}else if(operationCase == 4){
 					//multiplyPolynomials
-					System.out.println("Enter degree of second Polynomial ");
+					System.out.println("Enter no of terms of second Polynomial ");
 					
 					int length2 = scanner.nextInt();
-					int polyArr2[] = new int[length2+1];
-					for(int index = 0; index <= length2; index++){
-						polyArr2[index] = scanner.nextInt();
+					int polyArr2[][] = new int[length2][2];
+					for(int index = 0; index < length2; index++){
+						System.out.println("Enter coofficient and power of term in polynomial");
+						polyArr2[index][0] = scanner.nextInt();
+						polyArr2[index][1] = scanner.nextInt();
 					}
 					Polynomial poly2 = new Polynomial(polyArr2);
-					int multipliedPoly[] = Polynomial.multiplyPolynomials(poly, poly2);
+					int multipliedPoly[][] = Polynomial.multiplyPolynomials(poly, poly2);
 					System.out.println("Multiplied polynomial");
 					printPoly(multipliedPoly);
 					
